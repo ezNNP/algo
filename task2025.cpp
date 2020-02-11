@@ -14,6 +14,8 @@ int main(int argc, const char * argv[]) {
         cin >> n >> k;
         solve_and_print(n, k);
     }
+
+    return 0;
 }
 
 void solve_and_print(int n, int k) {
@@ -46,4 +48,3 @@ void solve_and_print(int n, int k) {
 
     cout << result << endl;
 }
-
