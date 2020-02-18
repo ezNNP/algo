@@ -1,3 +1,6 @@
+// титульник, постановка задачи, краткое словестное описание решения,
+// блок-схема реализованного алгоритма, текст решения с комментариями
+
 #include <iostream>
 #include <vector>
 
@@ -6,8 +9,8 @@ using namespace std;
 void solve_and_print(int n, int k);
 
 int main(int argc, const char * argv[]) {
-    int T;
-    cin >> T; // <-- количество тестов
+    int T; // количество тестов
+    cin >> T;
 
     for (int i = 0; i < T; ++i) {
         int n, k;
@@ -19,7 +22,7 @@ int main(int argc, const char * argv[]) {
 }
 
 void solve_and_print(int n, int k) {
-    int nn;
+    int nn; // (nn > n) & (nn % k == 0)
     if (n % k == 0) {
         nn = n;
     } else {
@@ -30,14 +33,15 @@ void solve_and_print(int n, int k) {
         teams[i] = nn / k;
     }
     int dec_team_pointer = 0;
-    while (nn > n) {
+    while (nn > n) { // пока nn > n будем убирать из каждый команды по одному человеку
         teams[dec_team_pointer++]--;
         nn--;
         if (dec_team_pointer == k) {
             dec_team_pointer = 0;
         }
     }
-    long long result = 0;
+
+    long long result = 0; // считаем результат
     for (int i = 0; i < k - 1; ++i) {
         for (int j = i+1; j < k; ++j) {
             result += teams[i] * teams[j];

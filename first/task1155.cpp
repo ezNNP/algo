@@ -13,7 +13,6 @@ int main(int argc, const char * argv[]) {
     }
 
     while (A + C + F + H) {
-
         if (A > 0) {
             if (B > 0) {
                 A--;
