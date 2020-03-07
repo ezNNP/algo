@@ -5,17 +5,11 @@ using namespace std;
 
 int main(int  argc, const char * argv[]) {
     int n;
-
     cin >> n;
-
     stack<int> arr;
-
     bool cheater = false;
-
     int last, current;
-
     last = 0;
-
     for (int i = 0; i < n; ++i) {
         cin >> current;
         for (int j = last+1; j <= current; ++j) {
@@ -29,12 +23,10 @@ int main(int  argc, const char * argv[]) {
             break;
         }
     }
-
     if (cheater) {
         cout << "Cheater";
     } else {
         cout << "Not a proof";
     }
-
     return 0;
 }
