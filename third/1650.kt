@@ -12,12 +12,6 @@ val result = TreeMap<String, Int>()
 var lastCityMax = ""
 var lastMax = BigInteger.valueOf(-1L)
 
-// Abramovich   London  15000000000
-// Deripaska    Moscow  10000000000
-// Potanin      Moscow  5000000000
-// Berezovsky   London  2500000000
-// Khodorkovsky Chita   1000000000
-
 fun increaseCityMoney(city: String, amount: BigInteger) {
     val oldAmount = citiesMoney[city]
     if (citiesMoney.containsKey(city)) {
@@ -69,8 +63,6 @@ fun main(args: Array<String>) {
     var lastDay = 0
     val k = input_km[0].toInt()
     val m = input_km[1].toInt()
-    // TODO: sometimes lastDay == currentDay
-    // TODO: Check first days and last days
     for (i in 1..m) {
         val input = readLine()!!.split(" ")
         val dayNum = input[0].toInt()

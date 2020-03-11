@@ -1,8 +1,6 @@
 #include <iostream>
 #include <vector>
 
-#define DOUBLE_MAX std::numeric_limits<double>::max()
-
 using namespace std;
 
 struct edge {
